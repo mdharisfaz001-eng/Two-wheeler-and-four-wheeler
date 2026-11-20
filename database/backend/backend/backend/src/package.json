@@ -1,0 +1,14 @@
+
+{
+  "name": "auto-consulting-system",
+  "version": "1.0.0",
+  "description": "Two-Wheeler and Four-Wheeler Auto Consulting System",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0",
+    "cors": "^2.8.5"
+  }
+}
