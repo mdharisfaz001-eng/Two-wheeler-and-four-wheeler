@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoConsult</title>
+<style>
+body{font-family:Arial;margin:0;background:#f3f5fa;color:#222}
+header{background:#142b4a;color:white;padding:22px;text-align:center}
+nav{background:#244c78;padding:14px;text-align:center}
+nav a{color:white;margin:12px;text-decoration:none}
+.container{padding:30px;max-width:950px;margin:auto}
+.card{background:white;padding:20px;margin:15px 0;border-radius:10px;box-shadow:0 2px 8px #ddd}
+button{background:#2463a5;color:white;border:0;padding:10px 18px;border-radius:5px;cursor:pointer}
+input,select{padding:10px;margin:7px 0;width:95%;border:1px solid #ccc;border-radius:5px}
+h2{color:#244c78}
+</style>
+</head>
+<body>
+<header>
+<h1>🚗 AutoConsult</h1>
+<p>Two-Wheeler and Four-Wheeler Auto Consulting System</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#vehicles">Vehicles</a>
+<a href="#consult">Consultation</a>
+<a href="#service">Services</a>
+<a href="#review">Reviews</a>
+</nav>
+
+<div class="container">
+<section id="home" class="card">
+<h2>Welcome to AutoConsult</h2>
+<p>Explore vehicles, get expert advice and find vehicle service centers in one place.</p>
+</section>
+
+<section id="vehicles" class="card">
+<h2>Vehicle Catalog</h2>
+<h3>Two-Wheelers</h3>
+<p>Honda Activa 6G – ₹78,000</p>
+<p>TVS Apache RTR 160 – ₹1,25,000</p>
+<h3>Four-Wheelers</h3>
+<p>Maruti Swift – ₹6,50,000</p>
+<p>Hyundai Creta – ₹11,50,000</p>
+</section>
+
+<section id="consult" class="card">
+<h2>Vehicle Consultation</h2>
+<input id="name" placeholder="Customer Name">
+<input id="budget" type="number" placeholder="Your Budget">
+<select id="type">
+<option>Two-Wheeler</option>
+<option>Four-Wheeler</option>
+</select>
+<button onclick="consult()">Request Consultation</button>
+<p id="consultMsg"></p>
+</section>
+
+<section id="service" class="card">
+<h2>Service Centers</h2>
+<p>AutoCare Motors – Tiruchirappalli</p>
+<p>SpeedFix Garage – Tiruchirappalli</p>
+<p>Vehicle maintenance and service booking information.</p>
+</section>
+
+<section id="review" class="card">
+<h2>Customer Reviews</h2>
+<input id="reviewName" placeholder="Your Name">
+<select id="rating">
+<option>5</option><option>4</option><option>3</option>
+<option>2</option><option>1</option>
+</select>
+<input id="comment" placeholder="Write your feedback">
+<button onclick="review()">Submit Review</button>
+<p id="reviewMsg"></p>
+</section>
+</div>
+
+<script>
+function consult(){
+ document.getElementById('consultMsg').innerText =
+ 'Consultation request received for ' +
+ document.getElementById('name').value;
+}
+function review(){
+ document.getElementById('reviewMsg').innerText =
+ 'Thank you for your review!';
+}
+</script>
+</body>
+</html>
